@@ -1,6 +1,10 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function ($scope) {
+    var map = new BMap.Map("container");          // 创建地图实例  
+    var point = new BMap.Point(116.404, 39.915);  // 创建点坐标  
+    map.centerAndZoom(point, 15);
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
